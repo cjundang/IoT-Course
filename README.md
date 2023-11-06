@@ -27,21 +27,22 @@ more info [click](https://iotgyaan.com/types-of-iot-sensors/)
 * Actuator
   * The response when the smart object sense and commit any condition
   * The falling is detected by the accelerator sensor, the red alert is activated
- 
-[<img src="iimages/01/actuator.png" width="200"/>](images/01/actuator.png)
+
+[<img src="images/01/actuator.png" width="200"/>](images/01/actuator.png)
 
 * Processing Unit
   * Is to process signal and data
   * Routing data to next node
   * Normally, there are the low power consumption devices
-  ![ESP8266](https://static.cytron.io/image/cache/catalog/products/NodeMCU-V2-DOIT/NODEMCU-V2-DOIT%201-512x512.jpg)
-  ![ESP32](https://static.cytron.io/image/cache/catalog/products/NODEMCU-ESP32/NODEMCU-ESP32-512x512.jpg)
-  ![Arduino Uno](https://static.cytron.io/image/cache/catalog/products/ARDUINO-UNO/arduino-uno-rev3-main-board-22898-512x512.jpg)
-  
+  [<img src="https://static.cytron.io/image/cache/catalog/products/NodeMCU-V2-DOIT/NODEMCU-V2-DOIT%201-512x512.jpg" width="200"/>](https://static.cytron.io/image/cache/catalog/products/NodeMCU-V2-DOIT/NODEMCU-V2-DOIT%201-512x512.jpg)
+  [<img src="https://static.cytron.io/image/cache/catalog/products/NODEMCU-ESP32/NODEMCU-ESP32-512x512.jpg" width="200"/>](https://static.cytron.io/image/cache/catalog/products/NODEMCU-ESP32/NODEMCU-ESP32-512x512.jpg)
+ [<img src="https://static.cytron.io/image/cache/catalog/products/ARDUINO-UNO/arduino-uno-rev3-main-board-22898-512x512.jpg" width="200"/>](https://static.cytron.io/image/cache/catalog/products/ARDUINO-UNO/arduino-uno-rev3-main-board-22898-512x512.jpg)
+ 
   
 * Transceiver
   * Is to send and receive data between devices-sensor, device-device
   * The the frequency of wireless module are 868 MHz, 915 MHz, 2.4 GHz
+  
 * Power source
   * Most smart object are low power consumption device.
   * Consume power from 2AA battery
