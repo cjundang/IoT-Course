@@ -10,7 +10,7 @@ by Chanankorn Jandaeng, Ph.D.
 * The basic idea of this concept is the pervasive presence around us of a variety of things or objects through unique addressing schemes, can interact with each other and cooperate with their neighbours to reach common goals
 * The **Smart Object** is the key.
 
-![Smart Object](images/01/smart_object.png)
+[<img src="images/01/smart_object.png" width="200"/>](images/01/smart_object.png)
 
 **Hardware Components**
 
