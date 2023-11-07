@@ -1,11 +1,11 @@
 # Internet of Things course
 
 by Chanankorn Jandaeng, Ph.D.
-# Table of Contents
+
+**Table of Contents**
+
 1. [Introduction of Internet of Things](#intro_iot)
-2. [Example](#example2)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+
 
 
 ## Introduction of Internet of Things
@@ -41,6 +41,7 @@ more info [click](https://iotgyaan.com/types-of-iot-sensors/)
   * Is to process signal and data
   * Routing data to next node
   * Normally, there are the low power consumption devices
+
   [<img src="https://static.cytron.io/image/cache/catalog/products/NodeMCU-V2-DOIT/NODEMCU-V2-DOIT%201-512x512.jpg" width="100"/>](https://static.cytron.io/image/cache/catalog/products/NodeMCU-V2-DOIT/NODEMCU-V2-DOIT%201-512x512.jpg)
   [<img src="https://static.cytron.io/image/cache/catalog/products/NODEMCU-ESP32/NODEMCU-ESP32-512x512.jpg" width="100"/>](https://static.cytron.io/image/cache/catalog/products/NODEMCU-ESP32/NODEMCU-ESP32-512x512.jpg)
  [<img src="https://static.cytron.io/image/cache/catalog/products/ARDUINO-UNO/arduino-uno-rev3-main-board-22898-512x512.jpg" width="100"/>](https://static.cytron.io/image/cache/catalog/products/ARDUINO-UNO/arduino-uno-rev3-main-board-22898-512x512.jpg)
@@ -59,6 +60,7 @@ more info [click](https://iotgyaan.com/types-of-iot-sensors/)
 
 
 **Internet of Things**
+
 <img src="images/01/iot.png" width="400"/>
 
 **Key Takeaway**
@@ -71,7 +73,6 @@ more info [click](https://iotgyaan.com/types-of-iot-sensors/)
 * Power source is a key of processing power
 * The components are things, data, process, people
 
-## Introduction of Internet of Things
 **Microcontroller**
 * A microcontroller is a chip optimized to control electronic devices. 
 * It is stored in a single integrated circuit which is dedicated to performing a particular task and execute one specific application.
@@ -126,4 +127,40 @@ more info [click](https://iotgyaan.com/types-of-iot-sensors/)
 
 <img src="images/01/nodemcu_pin.png" width="400"/>
 
-<a name="example2"></a>
+
+### Workshop
+
+**Toolschain**
+* Download “Arduino IDE” from www.arduio.cc, then select the program for your architecture
+* https://www.arduino.cc/en/software
+
+<img src="images/01/arduino_web.png" width="400"/>
+
+**Setting**
+
+* Select File, then select Preference
+* Add [PATH] in Additional Boards Manager URLs, Then select OK
+  * https://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+<img src="images/01/add_path.png" width="400"/>
+
+* Install ESP8266  board manager, select Tools —> Boards —> Boards Manager
+  * Type “ESP8266” to search the package
+* Finally, install
+
+<img src="images/01/add_esp8266.png" width="400"/>
+
+**COM Port**
+
+<img src="images/01/com_port.png" width="400"/>
+
+**Select Board**
+
+<img src="images/01/com_port.png" width="400"/>
+
+**Flash program**
+* To test, File > Examples > 01.Basics > Blink 
+
+<img src="images/01/blink.png" width="400"/>
+
+<img src="images/01/compile.png" width="400"/>
