@@ -98,12 +98,13 @@ more info [click](https://iotgyaan.com/types-of-iot-sensors/)
 | Architecture | Microcontrollers typically use the H     |    Microprocessors typically use the von Neumann architecture, where program memory and data memory share the same address space. |
 |Application|Microcontrollers are used in embedded systems, such as smart thermostats, smart light bulbs, and smart door locks.|Microprocessors are used in general-purpose computers, such as desktop computers, laptops, and smartphones.|
 |Limitation|- Limited memory and processing power. - May not have all of the features needed for complex applications.| - May be too expensive or power-hungry for some applications. - May require additional components to function, such as memory and I/O devices.|
-||||
+
 
 
 **ESP8266**
 * ESP8266 is the WiFi Module the compatible of IEEE802.11 and consists of PIN is for connecting the module. 
-<img src="images/01/esp8266.png" width="400"/>
+
+<img src="images/01/esp82666.png" width="400"/>
 
 **NodeMCU**
 
