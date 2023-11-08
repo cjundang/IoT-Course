@@ -2,8 +2,15 @@
 
 by Chanankorn Jandaeng, Ph.D.
 
+
+
+
 ## Introduction of Internet of Things
-<a name="intro_iot"></a>
+
+**Aims** 
+* To describe the technologies of Internet of Things
+* To explain the applications of Internet of Things
+* Can prepare the tools chain for NodeMCU
 
 **what is internet of things**
 
