@@ -200,3 +200,69 @@ void loop()
 }
 
 ```
+
+**I2C**
+* Inter-Integrated Circuit (I2C) is the data communication for low-speed communication.
+    * Use in microprocessor or microcontroller
+    * Compatible many devices in a single bus
+        * SDA (Serial Data) :- TX/RX
+        * SCL (Serial Clock) :- control
+
+<img src="images/02/i2c.png" width="400"/>
+
+* I2C on NodeMCU
+
+<img src="images/02/i2c2.png" width="400"/>
+
+* Add downloaded Library
+    * Download: https://github.com/cjundang/IoTWorkshop6Hr/blob/master/Arduino-LiquidCrystal-I2C-library-master.zip 
+    * Add to Arduino IDE
+        * Select Sketch > Include Library > Add zip Library
+
+<img src="images/02/add_lib.png" width="400"/>
+
+* Code:
+```
+#include <LiquidCrystal_I2C.h>
+#include <Adafruit_Sensor.h>
+LiquidCrystal_I2C lcd(0x27,16,2);
+void setup(){
+  lcd.begin();
+  lcd.setCursor(0, 0);
+  lcd.print("Hello Word");
+  lcd.setCursor(5, 1);
+  lcd.print("School of Informarics");
+}
+
+void loop(){
+}
+```
+* OLED
+    * Add Library
+        * Search “adafruit ssd1306”
+        * Install ALL library
+```
+#include <SPI.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define OLED_RESET 16
+Adafruit_SSD1306 display(OLED_RESET);
+void setup() {
+    display.begin(SSD1306_SWITCHCAPVCC, 0x3c);  
+    display.clearDisplay();  
+    display.setTextSize(1);  
+    display.setTextColor(WHITE);
+    display.setCursor(0,0);  
+    display.println("Hello");
+
+    display.setCursor(0,10);
+    display.setTextSize(2);
+    display.setTextColor(BLACK, WHITE);  
+    display.println("World");
+    display.display();
+}
+void loop() {
+}
+```
