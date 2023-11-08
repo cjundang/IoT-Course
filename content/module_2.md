@@ -165,6 +165,13 @@ void loop() {
 
 <img src="images/02/ex_07.png" width="300"/>
 
+* Add library named DHT11
+    * Search DHT11 and install
+    * Install -> Install All
+
+<img src="images/02/add_dht11.png" width="300"/>
+
+* Code
 
 ```
 #include "DHT.h"
