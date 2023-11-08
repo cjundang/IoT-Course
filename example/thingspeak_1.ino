@@ -2,11 +2,11 @@
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
 
-const char* ssid = "cj";
-const char* password = "1234567890";
+const char* ssid = "ssid";
+const char* password = "pass";
 
-//https://api.thingspeak.com/update?api_key=L154EEQBB11DEPM3&field1=0
-String writeKey = "L154EEQBB11DEPM3";
+//https://api.thingspeak.com/update?api_key=KEY&field1=0
+String writeKey = "KEY";
 String serverName = "http://api.thingspeak.com/update?api_key="+writeKey;
 
 unsigned long lastTime = 0;

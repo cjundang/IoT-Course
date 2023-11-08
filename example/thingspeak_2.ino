@@ -1,11 +1,11 @@
 #include <ESP8266WiFi.h>
 #include "ThingSpeak.h"
 
-const char* ssid = "cj";
-const char* password = "1234567890";
+const char* ssid = "ssid";
+const char* password = "pass";
 
 unsigned long channelID = 1486243;
-const char* writeKey = "L154EEQBB11DEPM3";
+const char* writeKey = "KEY";
 
 unsigned long lastTime = 0;
 unsigned long timerDelay = 15000;
