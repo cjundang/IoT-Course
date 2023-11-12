@@ -296,6 +296,8 @@ validate the status, if x is 200, the connection is success.
   }
 }
 ```
+download code
+[here](/example/thingspeak_2.ino)
 ### IoT Server: Privare
 ### CoAP
 ### MQTT
