@@ -200,23 +200,23 @@ server.on( UriBrances("^\\/users\\/([0-9]+)\\/devices\\/([0-9]+)$"), [](){
 
 **How to register Thingspeak**
 
-<img src="images/03/tsp_01.PNG" width="100%"/>
+<img src="images/03/tsp_01.PNG" width="400"/>
 
-<img src="images/03/tsp_02.PNG" width="100%"/>
+<img src="images/03/tsp_02.PNG" width="400"/>
 
-<img src="images/03/tsp_03.PNG" width="100%"/>
+<img src="images/03/tsp_03.PNG" width="400"/>
 
-<img src="images/03/tsp_04.PNG" width="100%"/>
+<img src="images/03/tsp_04.PNG" width="400"/>
 
-<img src="images/03/tsp_05.PNG" width="100%"/>
+<img src="images/03/tsp_05.PNG" width="400"/>
 
-<img src="images/03/tsp_06.PNG" width="100%"/>
+<img src="images/03/tsp_06.PNG" width="400"/>
 
-<img src="images/03/tsp_07.PNG" width="100%"/>
+<img src="images/03/tsp_07.PNG" width="400"/>
 
-<img src="images/03/tsp_08.PNG" width="100%"/>
+<img src="images/03/tsp_08.PNG" width="400"/>
 
-<img src="images/03/tsp_10.PNG" width="100%"/>
+<img src="images/03/tsp_10.PNG" width="400"/>
 
 
 **NodeMCU connecting to Thingspeak**
