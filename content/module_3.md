@@ -200,14 +200,6 @@ server.on( UriBrances("^\\/users\\/([0-9]+)\\/devices\\/([0-9]+)$"), [](){
 
 **How to register Thingspeak**
 
-# Internet of Things course
-
-by Chanankorn Jandaeng, Ph.D.
-
-## Thingspeak
-
-### ขั้นตอนการลงทะเบียนและใช้งาน Thingspeak
-
 <img src="images/03/tsp_01.PNG" width="100%"/>
 
 <img src="images/03/tsp_02.PNG" width="100%"/>
@@ -226,6 +218,24 @@ by Chanankorn Jandaeng, Ph.D.
 
 <img src="images/03/tsp_10.PNG" width="100%"/>
 
+
+**NodeMCU connecting to Thingspeak**
+- add thingspeak library to Arduino IDE, search "Thingspeak" by MathWorks
+
+<img src="images/03/add_thingspeak.PNG" width="100%"/>
+
+- The library includes several examples organized by board type to help you get started. These are accessible in Examples > ThingSpeak menu of the Arduino IDE
+  - ReadField: Reading from a public channel and a private channel on ThingSpeak.
+  - WriteSingleField: Writing a value to a single field on ThingSpeak.
+  - WriteMultipleFields: Writing values to multiple fields and status in one transactio
+  - ReadMultipleFields: Reading values from multiple fields, status, location, created-at timestamp from a public channel on ThingSpeak
+
+more details from link <a href="https://github.com/mathworks/thingspeak-arduino">thingspeak-arduino</a>
+
+- short example
+```
+
+```
 ### IoT Server: Privare
 ### CoAP
 ### MQTT
