@@ -298,7 +298,52 @@ validate the status, if x is 200, the connection is success.
 ```
 download code
 [here](/example/thingspeak_2.ino)
-### IoT Server: Privare
-### CoAP
+
+### IoT Server: JSON-Server
+**Install JSON-server**
+- download and install nodejs and npm
+  - download nodejs from https://nodejs.org/en/download
+- download and install json-server
+```
+npm install -g json-server
+```
+- official document of JSON-server from [here](https://www.npmjs.com/package/json-server)
+
+**The experimental architecture**
+
+<img src="images/03/iot_architecture.PNG" width="400"/>
+
+- create data.json
+```
+{
+    "sensers": [
+      { 
+        "id": 0, 
+        "title": "dht11", 
+        "value": "0" 
+        }
+    ]
+}
+```
+- start service
+```
+>json-server --watch data.json
+
+  \{^_^}/ hi!
+
+  Loading data.json
+  Done
+
+  Resources
+  http://localhost:3000/sensers
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+```
 ### MQTT
+### CoAP
+
 
