@@ -308,6 +308,7 @@ download code
 npm install -g json-server
 ```
 - official document of JSON-server from [here](https://www.npmjs.com/package/json-server)
+- more example of JSON-server [here](https://devahoy.com/mock-api-with-json-server/)
 
 **The experimental architecture**
 
