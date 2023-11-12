@@ -327,7 +327,7 @@ npm install -g json-server
 ```
 - start service
 ```
->json-server --watch data.json
+>json-server -H 0.0.0.0 --watch data.json
 
   \{^_^}/ hi!
 
@@ -335,13 +335,70 @@ npm install -g json-server
   Done
 
   Resources
-  http://localhost:3000/sensers
+  http://0.0.0.0:3000/sensers
 
   Home
-  http://localhost:3000
+  http://0.0.0.0:3000
 
   Type s + enter at any time to create a snapshot of the database
   Watching...
+```
+- code
+```
+#include <ESP8266WiFi.h>
+#include <ESP8266HTTPClient.h>
+#include <WiFiClient.h>
+
+const char* ssid = "ssid";
+const char* password = "passwd";
+
+const char* serverName = "http://192.168.204.29:3000/sensors";
+
+unsigned long lastTime = 0;
+unsigned long timerDelay = 5000;
+
+WiFiClient  client;
+
+```
+setup function: try to connect to wifi
+```
+void setup() {
+  Serial.begin(115200); 
+
+  WiFi.begin(ssid, password);
+  Serial.println("Connecting");
+  while(WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.print("Connected to WiFi network with IP Address: ");
+  Serial.println(WiFi.localIP());
+}
+```
+loop and delay for 5 second
+```
+void loop() {
+  if ((millis() - lastTime) > timerDelay) {
+    if(WiFi.status()== WL_CONNECTED){
+      WiFiClient client;
+      HTTPClient http;
+      http.begin(client, serverName);
+```
+set data content-type is JSON  and prepar data and represent in JSON format
+```
+      http.addHeader("Content-Type", "application/json");
+      int httpResponseCode = http.POST("{\"title\":\"dht11\", \"value\":11}");
+      Serial.print("HTTP Response code: ");
+      Serial.println(httpResponseCode);
+      http.end();
+    }
+  else {
+      Serial.println("WiFi Disconnected");
+    }
+    lastTime = millis();
+  }
+}
 ```
 ### MQTT
 ### CoAP
