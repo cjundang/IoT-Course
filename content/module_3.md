@@ -402,6 +402,21 @@ set data content-type is JSON  and prepar data and represent in JSON format
 }
 ```
 ### MQTT
+
+MQTT, which stands for Message Queuing Telemetry Transport, is a lightweight and open messaging protocol designed for small sensors and mobile devices with limited bandwidth and power. It was developed by IBM in the late 1990s and later became an open standard. MQTT is widely used in the Internet of Things (IoT) and other applications where low-latency and real-time communication are essential.
+
+Here are some key characteristics of MQTT:
+
+- Publish/Subscribe Model: MQTT uses a publish/subscribe messaging pattern. Devices, also known as clients, can publish messages to specific topics or subscribe to receive messages on specific topics.
+- Broker: MQTT communication is facilitated through a central component called the broker. The broker is responsible for receiving messages from publishers and delivering them to subscribers based on the topic. It acts as an intermediary for message exchange.
+- Topics: Messages are organized into topics, which are like channels or categories. Clients can subscribe to specific topics to receive messages related to those topics. Topics provide a way to categorize and filter messages.
+
+- Lightweight: One of the key advantages of MQTT is its lightweight nature. The protocol is designed to be efficient in terms of bandwidth usage and is well-suited for resource-constrained devices and low-bandwidth, high-latency, or unreliable
+networks.
+
+- Security: While MQTT itself does not provide security features, it can be used in conjunction with other security mechanisms such as TLS/SSL for encryption and authentication.
+
+
 ### CoAP
 
 
