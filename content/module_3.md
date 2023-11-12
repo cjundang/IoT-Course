@@ -208,7 +208,7 @@ by Chanankorn Jandaeng, Ph.D.
 
 ### ขั้นตอนการลงทะเบียนและใช้งาน Thingspeak
 
-<img src="images/03/tsp_01.PNG" width="300"/>
+<img src="images/03/tsp_01.PNG" width="500"/>
 
 <img src="images/03/tsp_02.PNG" width="300"/>
 
