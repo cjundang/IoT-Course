@@ -222,7 +222,7 @@ server.on( UriBrances("^\\/users\\/([0-9]+)\\/devices\\/([0-9]+)$"), [](){
 **NodeMCU connecting to Thingspeak**
 - add thingspeak library to Arduino IDE, search "Thingspeak" by MathWorks
 
-<img src="images/03/add_thingspeak.PNG" width="100%"/>
+<img src="images/03/add_thingspeak.PNG" width="300"/>
 
 - The library includes several examples organized by board type to help you get started. These are accessible in Examples > ThingSpeak menu of the Arduino IDE
   - ReadField: Reading from a public channel and a private channel on ThingSpeak.
@@ -232,9 +232,69 @@ server.on( UriBrances("^\\/users\\/([0-9]+)\\/devices\\/([0-9]+)$"), [](){
 
 more details from link <a href="https://github.com/mathworks/thingspeak-arduino">thingspeak-arduino</a>
 
-- short example
-```
+- short example : 
 
+**Preparations**
+```
+#include <ESP8266WiFi.h>
+#include "ThingSpeak.h"
+
+const char* ssid = "ssid";
+const char* password = "pass";
+
+unsigned long channelID = 1486243;
+const char* writeKey = "KEY";
+
+unsigned long lastTime = 0;
+unsigned long timerDelay = 15000;
+
+WiFiClient  client;
+```
+**Setup()**
+```
+void setup() {
+  Serial.begin(115200);   
+  WiFi.mode(WIFI_STA);   
+  ThingSpeak.begin(client);   
+}
+```
+**loop()**
+```
+void loop() {
+  if ((millis() - lastTime) > timerDelay) {
+```
+try to connect to wireless
+```
+    if(WiFi.status() != WL_CONNECTED){
+      Serial.print("Attempting to connect");
+      while(WiFi.status() != WL_CONNECTED){
+        WiFi.begin(ssid, password); 
+        delay(5000);     
+      } 
+      Serial.println("\nConnected.");
+    }
+```
+get data from sensor 
+```
+    int value = analogRead(A0);
+    Serial.print("Value: ");
+    Serial.println(value);
+```
+send single value to thingspeak
+```
+    int x = ThingSpeak.writeField(channelID, 2, value, writeKey);
+```
+validate the status, if x is 200, the connection is success.
+```
+    if(x == 200){
+      Serial.println("Channel update successful.");
+    }
+    else{
+      Serial.println("Problem updating channel. HTTP error code " + String(x));
+    }
+    lastTime = millis();
+  }
+}
 ```
 ### IoT Server: Privare
 ### CoAP
