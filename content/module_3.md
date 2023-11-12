@@ -316,7 +316,7 @@ npm install -g json-server
 - create data.json
 ```
 {
-    "sensers": [
+    "sensors": [
       { 
         "id": 0, 
         "title": "dht11", 
