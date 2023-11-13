@@ -405,6 +405,8 @@ set data content-type is JSON  and prepar data and represent in JSON format
 
 MQTT, which stands for Message Queuing Telemetry Transport, is a lightweight and open messaging protocol designed for small sensors and mobile devices with limited bandwidth and power. It was developed by IBM in the late 1990s and later became an open standard. MQTT is widely used in the Internet of Things (IoT) and other applications where low-latency and real-time communication are essential.
 
+
+![MQTT](/content/images/03/mqtt_broker.png)
 Here are some key characteristics of MQTT:
 
 - Publish/Subscribe Model: MQTT uses a publish/subscribe messaging pattern. Devices, also known as clients, can publish messages to specific topics or subscribe to receive messages on specific topics.
@@ -416,7 +418,24 @@ networks.
 
 - Security: While MQTT itself does not provide security features, it can be used in conjunction with other security mechanisms such as TLS/SSL for encryption and authentication.
 
-**Example**
+**Mosquitto: MQTT Broker**
+- download from [this link](https://mosquitto.org/download)
+- install and uncheck running as service
+- add "C:\Program Files\mosquitto" to system path
+- (optional) add firewall rule
+  - allow ping
+  - allow 1883/tcp
+- edit configure file named "C:\Program Files\mosquitto\mosquitto.conf"
+  - Find and add two line in configure file
+
+![mqtt config](/content/images/03/mqtt_config.png)
+
+- to start server
+![start server](/content/images/03/mqtt_runserv.png)
+
+- example
+![example](/content/images/03/mqtt_example.png)
+**Example**: to publish the sensing value to broker
 
 - initial the varaible
 ```
