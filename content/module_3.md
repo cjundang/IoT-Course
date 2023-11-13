@@ -419,4 +419,30 @@ networks.
 
 ### CoAP
 
+- CoAP is widely used in various IoT applications
+  - such as smart homes, industrial automation, smart cities, and sensor networks, 
+  - where resource-constrained devices need an efficient and reliable communication protocol. 
+- It offers a way to interact with IoT devices and sensors over constrained networks 
+  - while minimizing the overhead associated with more traditional protocols like HTTP.
+- Specialized web transfer protocol for constrained environments
+- Designed for Internet of Things (IoT) applications
+- Lightweight and efficient
+- Ideal for resource-constrained devices and low-power networks
+- Equivalent of HTTP for IoT and constrained devices
+
+![Alt text](/content/images/03/coap_architecture.PNG)
+
+- Key features:
+  - Lightweight: CoAP is designed to be efficient and lightweight. It uses a compact binary format for messages, reducing overhead and conserving resources.
+  - RESTful: CoAP follows the principles of Representational State Transfer (REST), similar to HTTP. It uses methods like GET, POST, PUT, and DELETE to interact with resources identified by URIs (Uniform Resource Identifiers).
+  - UDP-based: CoAP primarily uses the User Datagram Protocol (UDP) as its transport layer, which is well-suited for low-power and lossy networks. However, it can also run over other protocols like TCP or DTLS for secure communication.
+  - Request-response model: CoAP employs a request-response model, similar to HTTP. Clients send requests to servers, which respond with appropriate responses. It also supports asynchronous communication for observing resources and receiving notifications when they change.
+  - Resource discovery: CoAP includes a mechanism for resource discovery, allowing clients to discover available resources on a server by querying a ".well-known/core" resource.
+  - CoAP options: CoAP messages can include options that provide additional information or metadata about the request or response. These options are similar to HTTP headers but are designed to be more compact.
+  - Security: CoAP can be secured using the Datagram Transport Layer Security (DTLS) protocol, which provides authentication and encryption for communication.
+  -Proxying: CoAP supports proxy servers, allowing clients to access resources on remote servers through a proxy, similar to how HTTP proxies work.
+  - Multicast support: CoAP supports IP multicast, making it suitable for applications that require group communication.
+
+
+
 
