@@ -431,9 +431,11 @@ networks.
 ![mqtt config](/content/images/03/mqtt_config.png)
 
 - to start server
+
 ![start server](/content/images/03/mqtt_runserv.png)
 
 - example
+
 ![example](/content/images/03/mqtt_example.png)
 **Example**: to publish the sensing value to broker
 
