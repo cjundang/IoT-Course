@@ -73,35 +73,59 @@ by Chanankorn Jandaeng, Ph.D.
 
 
 ### HTTP Protocol
-Hypertext Transfer Protocol (HTTP) เป็น โพรโตคอลที่ใช้เป็นหลักในการเข้าถึงข้อมูลบนเวิลด์ไวด์เว็บ โดย HTTP จะใช้บริการของ TCP ผ่าน wellknown port หมายและ 80  โดยแลกเปลี่ยน HTTP Transaction  การสื่อสารของ HTTP เป็นโพรโตคอลที่ไม่จำสถานะ (Stateless Protocol) แม้ว่ามันจะใช้บริการของ TCP ก็ตาม ซึ่งการสื่อสารทุกครั้งของต้องร้องขอการเชื่อมต่อเครือข่ายก่อนทุกๆ ครั้งซึ่งแตกต่างกับโพรโตคอลที่จำสถานะ หรือ stateful protocol 
 
-HTTP Transaction ระหว่างไคลเอนต์กับเซิร์ฟเวอร์ ประกอบด้วยข้อความ 2 แบบคือ: การร้องขอ (Request)  และ การตอบสนอง (Response) โดยที่เครื่องไคลเอนต์เริ่มต้นการติดต่อ โดยการส่งข้อความ ร้องขอ หลังจากนั้นเครื่องให้บริการ หรือเครื่อง server จะตอบกลับด้วย response message
+The Hypertext Transfer Protocol (HTTP) is a protocol primarily used to access information on the World Wide Web. HTTP utilizes the services of TCP through the well-known port number 80. HTTP transactions involve the exchange of communication and operate as a stateless protocol, even though it utilizes TCP services. In each communication instance, a network connection must be requested before any interaction, distinguishing it from stateful protocols.
 
-HTTP message ทั้งข้อความแบบการร้องขอ และการตอบสนอง ต่างก็มีรูปแบบที่คล้ายคลึงกัน
-* Request message ประกอบด้วย request line, header, และ body
-* Response message ประกอบด้วย response line, header และ body
+An HTTP transaction between the client and the server consists of two types of messages: Request and Response. The client initiates contact by sending a Request message, and subsequently, the server responds with a Response message.
+
+Both Request and Response messages in HTTP have similar formats, comprising a request line, headers, and a body.
+
+- Request message includes a request line, headers, and a body.
+- Response message includes a response line, headers, and a body.
 
 <img src="images/03/http_flow.png" width="300"/>
 
 <img src="images/03/http_message.png" width="300"/>
 
-**องค์ประกอบของ message**
+**Components of a Message**
 
-* Request type เป็นส่วนที่ใช้ในข้อความร้องขอนั้นๆ  ซึ่ง Request type ใน HTTP/1.1 
-* HTTP version เวอร์ชันล่าสุดของ HTTP คือ 1.1
-* Status code จะใช้ใน Response message  ซึ่ง Status code จะมีความคล้ายคลึ่งกับ FTP และ SMTP โพรโตคอล  โดยจะคำอธิบาย Status code ในรูปแบบของข้อความด้วย
-* Status phrase ส่วนนี้จะใช้ใน Response message  ซึ่งอธิบาย Status code ในรูปแบบของข้อความ  
+* **Request type:** This is the part used in a specific request message. The Request type in HTTP/1.1 specifies the type of request used in that version of HTTP.
 
-ตัวอย่าง GET Method
+* **HTTP version:** The latest version of HTTP is 1.1.
+
+* **Status code:** Used in the Response message, the Status code bears similarity to FTP and SMTP protocols. It describes the Status code in textual format.
+
+* **Status phrase:** This part is employed in the Response message to explain the Status code in a textual format.
+  
+Example GET Method
 
 <img src="images/03/get_method.png" width="300"/>
 
-ตัวอย่าง POST Method
+Example POST Method
 
 <img src="images/03/post_method.png" width="300"/>
 
-ตัวอย่างการทดลองการเชื่อมต่อโดยใช้โปรแกรม Telnet  ส่วนไคลเอนท์สามารถสื่อสารโดยตรงกับเซิร์ฟเวอร์ได้ โดยใช้ TELNET ซึ่งจะเข้าสู่ระบบ ผ่านทางพอร์ต 80
+**Example of Connecting Using Telnet**
 
+An experiment in connecting using the Telnet program allows the client to communicate directly with the server through TELNET, accessing the system via port 80.
+
+(*Note: Telnet is typically used for testing purposes, and it's important to note that transmitting sensitive information over Telnet is not secure because it doesn't encrypt the data being transmitted.*)
+
+**Procedure:**
+1. Open a command prompt or terminal on your client machine.
+2. Use the Telnet command to initiate a connection to the server:
+   ```bash
+   telnet [server_ip] 80
+   ```
+   Replace `[server_ip]` with the actual IP address of the server.
+
+3. Once the connection is established, you can directly communicate with the server through the Telnet interface.
+
+**Important:**
+- Port 80 is commonly associated with HTTP, and Telnet, in this case, is simulating a direct communication channel with the server.
+- Be cautious with Telnet usage, especially in production environments, as it lacks encryption, exposing data to potential security risks.
+- Consider using more secure protocols like SSH for sensitive communications.
+  
 <img src="images/03/demo_http.png" width="400"/>
 
 **WiFi and NodeMCU**
